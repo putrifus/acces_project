@@ -1,7 +1,5 @@
 package personnel;
 
-import java.util.ArrayList;
-
 import bdd.DAOManager;
 import javafx.collections.ObservableList;
 
@@ -24,8 +22,7 @@ public class EployeDAO extends DAOManager<Employe> {
 
 	@Override
 	public void delete(Employe obj) {
-		//toto
-		System.out.println("toto");
+	
 
 	}
 

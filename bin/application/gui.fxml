@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Gui_controller">
+   <children>
+      <TabPane layoutX="163.0" layoutY="82.0" prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <tabs>
+          <Tab fx:id="vue" closable="false" text="Vue">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <SplitPane dividerPositions="0.10193321616871705" layoutX="320.0" layoutY="186.0" orientation="VERTICAL" prefHeight="571.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <items>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                 <children>
+                                    <ImageView fitHeight="49.0" fitWidth="44.0" layoutX="5.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../iconesecu.png" />
+                                       </image></ImageView>
+                                    <Text layoutX="64.0" layoutY="16.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ALERTE SECURITE" wrappingWidth="723.13671875" />
+                                 </children>
+                              </AnchorPane>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" />
+                          </items>
+                        </SplitPane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab fx:id="bdg" closable="false" text="Badge / Personnel">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <SplitPane dividerPositions="0.6917293233082706" prefHeight="571.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <items>
+                              <ScrollPane>
+                                 <content>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="569.0" prefWidth="799.0">
+                                       <children>
+                                          <Button fx:id="generer" layoutY="2.0" mnemonicParsing="false" onAction="#generer" text="générer" />
+                                          <TableView fx:id="tabB" layoutY="36.0" prefHeight="533.0" prefWidth="170.0">
+                                            <columns>
+                                              <TableColumn fx:id="ibB" prefWidth="75.0" text="id" />
+                                              <TableColumn fx:id="blockB" prefWidth="75.0" text="block" />
+                                            </columns>
+                                          </TableView>
+                                          <Button fx:id="lock_badge" layoutX="71.0" layoutY="2.0" mnemonicParsing="false" text="bloquer" />
+                                          <TableView fx:id="tabE" layoutX="170.0" layoutY="36.0" prefHeight="534.0" prefWidth="506.0">
+                                            <columns>
+                                              <TableColumn prefWidth="75.0" text="identité" />
+                                              <TableColumn prefWidth="75.0" text="badgeId" />
+                                                <TableColumn prefWidth="75.0" text="groupe" />
+                                                <TableColumn prefWidth="101.0" text="arrêt de travail" />
+                                            </columns>
+                                          </TableView>
+                                          <Button layoutX="279.0" layoutY="2.0" mnemonicParsing="false" text="embaucher" />
+                                          <Button layoutX="368.0" layoutY="2.0" mnemonicParsing="false" text="virer" />
+                                          <Button layoutX="437.0" layoutY="2.0" mnemonicParsing="false" text="affecter groupe" />
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </ScrollPane>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                 <children>
+                                    <Text layoutX="96.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Selection" />
+                                    <TextField fx:id="idbField" editable="false" layoutX="46.0" layoutY="35.0" text="id badge" />
+                                    <TextField fx:id="ideField" editable="false" layoutX="46.0" layoutY="67.0" text="employé" />
+                                    <Button fx:id="assign" layoutX="46.0" layoutY="108.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="75.0" text="assigner" />
+                                    <Button fx:id="resest" layoutX="120.0" layoutY="108.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="75.0" text="reset" />
+                                 </children>
+                              </AnchorPane>
+                          </items>
+                        </SplitPane>
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+            <Tab fx:id="profils" closable="false" text="Profils">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" text="créer" />
+                        <Button layoutX="57.0" layoutY="14.0" mnemonicParsing="false" text="modifier" />
+                        <Button layoutX="118.0" layoutY="14.0" mnemonicParsing="false" text="supprimer" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab fx:id="ressources" closable="false" text="Ressources">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" text="créer" />
+                        <Button layoutX="57.0" layoutY="14.0" mnemonicParsing="false" text="modifier" />
+                        <Button layoutX="118.0" layoutY="14.0" mnemonicParsing="false" text="supprimer" />
+                        <TableView fx:id="tabR" layoutX="14.0" layoutY="51.0" prefHeight="507.0" prefWidth="768.0">
+                          <columns>
+                            <TableColumn fx:id="idR" prefWidth="75.0" text="C1" />
+                            <TableColumn fx:id="typeR" prefWidth="75.0" text="C2" />
+                              <TableColumn fx:id="lockR" prefWidth="75.0" text="Column X" />
+                              <TableColumn fx:id="grpR" prefWidth="75.0" text="Column X" />
+                          </columns>
+                        </TableView>
+                        <Button fx:id="bloquerR" layoutX="188.0" layoutY="14.0" mnemonicParsing="false" onAction="#bloquerRessource" text="LOCK" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab fx:id="arch" closable="false" text="Archives">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView layoutX="119.0" layoutY="103.0" prefHeight="571.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <columns>
+                            <TableColumn prefWidth="75.0" text="date" />
+                              <TableColumn prefWidth="75.0" text="badgeId" />
+                              <TableColumn prefWidth="75.0" text="identite" />
+                              <TableColumn prefWidth="75.0" text="idRessource" />
+                              <TableColumn prefWidth="75.0" text="autorisation" />
+                          </columns>
+                        </TableView>
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

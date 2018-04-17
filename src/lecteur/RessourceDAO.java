@@ -3,10 +3,6 @@ package lecteur;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.ArrayList;
-
-import badge.Badge;
-import badge.BadgeDAO;
 import bdd.DAOManager;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;

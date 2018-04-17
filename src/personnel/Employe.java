@@ -1,7 +1,5 @@
 package personnel;
 
-import java.text.SimpleDateFormat;
-
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
 
